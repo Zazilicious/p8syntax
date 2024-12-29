@@ -9,6 +9,3 @@ what it says on the tin
 
 Gotta make a dev environment, follow this tutorial:
 https://code.visualstudio.com/api/get-started/your-first-extension
-
-## Extension Settings
-
