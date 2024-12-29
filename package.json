@@ -1,0 +1,43 @@
+{
+  "name": "p8-syntax-highlighting",
+  "displayName": "P8 Syntax Highlighting",
+  "description": "Syntax highlighting for P8 assembly language files",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onLanguage:p8"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "p8",
+        "aliases": ["P8"],
+        "extensions": [".p8"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "p8",
+        "scopeName": "source.p8",
+        "path": "./syntaxes/p8.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "vscode": "^1.1.37",
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.1.37"
+  },
+  "dependencies": {}
+}
